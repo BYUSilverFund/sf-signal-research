@@ -1,8 +1,8 @@
 import gdown
 import pandas as pd
+from datasets.dataset import Dataset
 
 from research.config import DATA_DIR
-from datasets.dataset import Dataset
 
 RAW_FILE_PATH = DATA_DIR + "/crsp_monthly_raw.csv"
 CLEAN_FILE_PATH = DATA_DIR + "/crsp_monthly_clean.parquet"

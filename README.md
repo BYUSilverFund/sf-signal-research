@@ -18,10 +18,22 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 ```bash
 uv sync
 ```
+If your virtualenv isn't already activate run:
+```bash
+source .venv/bin/activate # MacOS/Linux
+
+.venv/Scripts/activate # Windows
+```
+
+### Add pre-commit hook
+```bash
+pre-commit install
+```
 That's it! You're all good to go!
 
 ## Miscellaneous
-To clean all of your code run:
+
+### Cleaning code
 ```bash
 pre-commit run --all-files
 ```
