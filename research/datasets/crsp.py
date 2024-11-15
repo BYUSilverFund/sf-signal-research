@@ -1,7 +1,7 @@
 import os
 import gdown
 import pandas as pd
-from research.datasets.config import DATA_DIR
+from research.config import DATA_DIR
 from research.datasets.dataset import Dataset
 
 RAW_FILE_PATH = DATA_DIR + "/crsp_monthly_raw.csv"

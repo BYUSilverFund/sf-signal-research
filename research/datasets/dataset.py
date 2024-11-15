@@ -2,12 +2,15 @@ from abc import ABC, abstractmethod
 import os
 import pandas as pd
 
-from research.datasets.config import DATA_DIR
+from research.config import DATA_DIR
 
 
 class Dataset(ABC):
 
     def __init__(self, RAW_FILE_PATH: str, CLEAN_FILE_PATH: str) -> None:
+        if not DATA_DIR:
+            raise "No data directory in root!"
+
         if not os.path.exists(DATA_DIR):
             os.makedirs(DATA_DIR)
 
