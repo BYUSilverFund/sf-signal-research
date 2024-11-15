@@ -6,7 +6,6 @@ from research.config import DATA_DIR
 
 
 class Dataset(ABC):
-
     def __init__(self, RAW_FILE_PATH: str, CLEAN_FILE_PATH: str) -> None:
         if not DATA_DIR:
             raise "No data directory in root!"
@@ -15,7 +14,6 @@ class Dataset(ABC):
             os.makedirs(DATA_DIR)
 
         if not os.path.exists(CLEAN_FILE_PATH):
-
             if not os.path.exists(RAW_FILE_PATH):
                 print("DOWNLOADING RAW FILE")
                 self.download()
