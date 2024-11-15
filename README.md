@@ -18,7 +18,6 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 ```bash
 uv sync
 ```
-
 That's it! You're all good to go!
 
 ## Miscellaneous
