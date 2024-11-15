@@ -2,7 +2,7 @@ import gdown
 import pandas as pd
 
 from research.config import DATA_DIR
-from research.datasets.dataset import Dataset
+from research.datasets import Dataset
 
 RAW_FILE_PATH = DATA_DIR + "/compustat_quarterly_raw.csv"
 CLEAN_FILE_PATH = DATA_DIR + "/compustat_quarterly_clean.parquet"
