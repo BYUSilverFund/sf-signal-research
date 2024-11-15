@@ -1,5 +1,6 @@
-from abc import ABC, abstractmethod
 import os
+from abc import ABC, abstractmethod
+
 import pandas as pd
 
 from research.config import DATA_DIR
