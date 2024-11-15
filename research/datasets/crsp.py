@@ -13,9 +13,7 @@ class CRSP(Dataset):
     Monthly dataset for CRSP. This class handles the downloading, and cleaning in order to improve the reproducibility of our research.
     """
 
-    def __init__(
-        self, RAW_FILE_PATH=RAW_FILE_PATH, CLEAN_FILE_PATH=CLEAN_FILE_PATH
-    ) -> None:
+    def __init__(self, RAW_FILE_PATH=RAW_FILE_PATH, CLEAN_FILE_PATH=CLEAN_FILE_PATH) -> None:
         super().__init__(RAW_FILE_PATH, CLEAN_FILE_PATH)
 
     def download(self):
@@ -56,9 +54,7 @@ class CRSP(Dataset):
 
         # Fix ret and prc variables
         df = df[df["ret"] != "C"]  # Not sure what the C in the data represents (IPO?)
-        df["prc"] = abs(
-            df["prc"]
-        )  # Stocks with unavailable prc data are negated (bid-ask spread)
+        df["prc"] = abs(df["prc"])  # Stocks with unavailable prc data are negated (bid-ask spread)
 
         # Cast types
         df["cusip"] = df["cusip"].astype(str)
