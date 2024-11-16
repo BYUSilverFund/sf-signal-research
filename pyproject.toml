@@ -5,9 +5,15 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "finance-byu>=0.2.0",
     "gdown>=5.2.0",
     "ipykernel>=6.29.5",
     "matplotlib>=3.9.2",
+    # used to set up jupyter server
+    "notebook",
+    # finance-byu uses numba and llvmlite. Due to outdated dependencies, numba requires an older numpy 2.0.x. Letting uv
+    # decide so when the time comes that numba updates, it will automatically push numpy up as well.
+    "numpy",
     "pandas>=2.2.3",
     "pre-commit>=4.0.1",
     "pyarrow>=18.0.0",
@@ -15,10 +21,6 @@ dependencies = [
     "seaborn>=0.13.2",
     "statsmodels>=0.14.4",
     "tabulate>=0.9.0",
-    "finance-byu>=0.2.0",
-    # finance-byu uses numba and llvmlite. Due to outdated dependencies, numba requires an older numpy 2.0.x. Letting uv
-    # decide so when the time comes that numba updates, it will automatically push numpy up as well.
-    "numpy",
 ]
 [tool.isort]
 profile = "black"
