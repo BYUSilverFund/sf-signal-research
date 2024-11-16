@@ -8,6 +8,7 @@ RAW_FILE_PATH = DATA_DIR + "/crsp_monthly_raw.csv"
 CLEAN_FILE_PATH = DATA_DIR + "/crsp_monthly_clean.parquet"
 
 
+# TODO: update class name to be something like CrspLoader
 class CRSP(Dataset):
     """
     Monthly dataset for CRSP. This class handles the downloading, and cleaning in order to improve the reproducibility of our research.

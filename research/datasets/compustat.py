@@ -8,6 +8,7 @@ RAW_FILE_PATH = DATA_DIR + "/compustat_quarterly_raw.csv"
 CLEAN_FILE_PATH = DATA_DIR + "/compustat_quarterly_clean.parquet"
 
 
+# TODO: updates class name to something like CompustatLoader
 class COMPUSTAT(Dataset):
     """
     Quarterly COMPUSTAT dataset. This class handles the downloading, and cleaning in order to improve the reproducibility of our research.
