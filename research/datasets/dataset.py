@@ -6,7 +6,6 @@ import pandas as pd
 from research.config import DATA_DIR
 
 
-# TODO: updates class name to be something like DatasetLoader
 class Dataset(ABC):
     def __init__(self, RAW_FILE_PATH: str, CLEAN_FILE_PATH: str) -> None:
         if not DATA_DIR:
