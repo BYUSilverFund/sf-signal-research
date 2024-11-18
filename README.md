@@ -62,7 +62,7 @@ Windows: File->Settings->Project->Python Interpreter
 
 Mac: PyCharm->Settings->Project->Python Interpreter
 ###### VSCode
-Kernel->Python Environments->.venv
+Go to a ipynb file->Kernel in top right->Python Environments->.venv
 
 #### 2. The dependency isn't in pyproject.toml
 Add it to the dependencies list and run 'uv sync' or add it at the top of file. See example project.
