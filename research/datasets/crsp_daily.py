@@ -54,6 +54,9 @@ class CRSPDaily(Dataset):
         # Sort values
         df = df.sort_values(by=["permno", "date"])
 
+        # Drop duplicates
+        df = df.drop_duplicates(subset=["permno", "date"])
+
         # Reset index
         df = df.reset_index(drop=True)
 
